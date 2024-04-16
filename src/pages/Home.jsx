@@ -2,10 +2,15 @@ import React from "react";
 import Header from "../components/common/Header";
 import { Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import {motion} from "framer-motion"
 
 function Home() {
   return (
-    <>
+    <motion.div
+    initial={{ opacity: 0, y: -50 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: 50 }}
+    transition={{ duration: 0.4 }} >
       <Header
         className="name"
         data-text="Our Recipes"
@@ -21,7 +26,7 @@ function Home() {
           </Link>
         </button>
       </Header>
-    </>
+    </motion.div>
   );
 }
 

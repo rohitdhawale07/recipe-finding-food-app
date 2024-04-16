@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getRecipe } from "../api/Api";
 import { Link, useParams } from "react-router-dom";
 import Recipes from "../pages/Recipes";
+import { motion } from "framer-motion";
 
 function RecipeDeatils() {
   const [recipe, setRecipe] = useState({});
@@ -18,7 +19,12 @@ function RecipeDeatils() {
   }, []);
 
   return Object.keys(recipe).length > 0 ? (
-    <div className="container mx-auto mt-28">
+    <motion.div
+    initial={{ opacity: 0, y: -50 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: 50 }}
+    transition={{ duration: 0.4 }}
+    className="container mx-auto mt-28">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 recipe-details">
         <div>
           <Link
@@ -63,7 +69,7 @@ function RecipeDeatils() {
           </table>
         </div>
       </div>
-    </div>
+    </motion.div>
   ) : null;
 }
 

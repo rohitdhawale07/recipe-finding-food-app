@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const [activeItem, setActiveItem] = useState("Home");
@@ -9,7 +10,13 @@ function Navbar() {
   };
   return (
     <>
-      <nav className="p-4 shadow-md bg-slate-50  fixed w-full top-0 z-10">
+      <motion.nav
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.6 }}
+        className="p-4 shadow-md bg-slate-50  fixed w-full top-0 z-10"
+      >
         <div className="container mx-auto flex items-center justify-start gap-20 ">
           <div className="flex items-center">
             <img
@@ -39,7 +46,7 @@ function Navbar() {
             </Link>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </>
   );
 }

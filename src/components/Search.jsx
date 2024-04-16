@@ -4,13 +4,17 @@ import { Grid, Form, Input, Icon } from "semantic-ui-react";
 function Search({ setSearchedQuery }) {
   const [value, setValue] = useState("");
   const onFormSubmit = () => {
-    setSearchedQuery(value);
-    setValue("");
+    if (!value) {
+      alert("You haven't entered any receipe yet");
+    } else {
+      setSearchedQuery(value);
+      setValue("");
+    }
   };
 
   useEffect(() => {
-    setSearchedQuery("pizza"); 
-  }, []); 
+    setSearchedQuery("pizza");
+  }, []);
   return (
     <>
       <Grid columns={2} textAlign="center" className="search-box">
