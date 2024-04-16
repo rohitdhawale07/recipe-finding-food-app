@@ -1,4 +1,21 @@
-# Getting Started with Create React App
+# Recipe Finding Food Application Using ReactJS
+## Hosted Link:- https://recipe-finding-food-app.vercel.app/
+
+Welcome to the Recipe Finder App! This application allows users to search for recipes, view recipe details, and explore various ingredients.
+
+## Features
+
+- **Recipe Search:** Users can search for recipes by entering ingredients separated by commas.
+- **Recipe Details:** View detailed information about a specific recipe, including the source URL and publisher details.
+- **Ingredients List:** Ingredients are displayed in a table format, making it easy to read.
+
+## Technologies Used
+
+- React: A JavaScript library for building user interfaces.
+- Tailwind CSS: A utility-first CSS framework for quickly styling the application.
+- Axios: A promise-based HTTP client for making API requests.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +85,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Happy cooking!
