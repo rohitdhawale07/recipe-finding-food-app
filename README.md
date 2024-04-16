@@ -14,6 +14,8 @@ Welcome to the Recipe Finder App! This application allows users to search for re
 - React: A JavaScript library for building user interfaces.
 - Tailwind CSS: A utility-first CSS framework for quickly styling the application.
 - Axios: A promise-based HTTP client for making API requests.
+- Framer-motion: Used this library for smooth routing between pages.
+
 
 ## Getting Started with Create React App
 
