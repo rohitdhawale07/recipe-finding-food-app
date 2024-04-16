@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Form, Input, Icon } from "semantic-ui-react";
 
 function Search({ setSearchedQuery }) {
   const [value, setValue] = useState("");
   const onFormSubmit = () => {
     setSearchedQuery(value);
+    setValue("");
   };
+
+  useEffect(() => {
+    setSearchedQuery("pizza"); 
+  }, []); 
   return (
     <>
       <Grid columns={2} textAlign="center" className="search-box">
         <Grid.Column>
-          <h2 className="text-4xl mb-15 text-gray-700">
+          <h2 className="text-3xl mb-15 text-gray-700">
             Search Recipes With{" "}
             <span className="text-red-500 food2fork text-5xl"> Food2Fork</span>{" "}
           </h2>

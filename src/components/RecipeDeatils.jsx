@@ -23,7 +23,7 @@ function RecipeDeatils() {
         <div>
           <Link
             to="/recipes"
-            className="bg-yellow-500 font-semibold hover:bg-yellow-300 hover:text-white text-white py-2 px-4 rounded text-lg"
+            className="bg-yellow-500 font-semibold hover:bg-yellow-400 duration-200 ease-in-out hover:text-white text-white py-2 px-4 rounded text-lg"
           >
             Back to recipe list
           </Link>
@@ -38,7 +38,7 @@ function RecipeDeatils() {
             href={recipe.publisher_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-500 text-white py-2 px-4 hover:bg-blue-700 hover:text-white rounded text-lg mt-4 inline-block"
+            className="bg-blue-500 text-white py-2 px-4  duration-200 ease-in-out hover:bg-blue-600 hover:text-white rounded text-lg mt-4 inline-block"
           >
             Publisher Webpage
           </a>
@@ -46,7 +46,7 @@ function RecipeDeatils() {
             href={recipe.source_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-500 text-white py-2 px-4  hover:bg-green-700 hover:text-white rounded text-lg mt-4 inline-block ml-4"
+            className="bg-green-500 text-white py-2 px-4 duration-200 ease-in-out  hover:bg-green-600 hover:text-white rounded text-lg mt-4 inline-block ml-4"
           >
             RECIPE URL
           </a>

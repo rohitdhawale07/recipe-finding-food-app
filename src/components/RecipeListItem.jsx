@@ -14,7 +14,7 @@ function RecipeListItem({ recipe }) {
       <Card className="w-60 h-96 bg-gray-200 p-4 m-4 rounded-lg shadow-md">
         <img src={recipe.image_url} alt="img" style={{ height: 180 }} />
         <CardContent>
-          <CardHeader content={(recipe.title).slice(0,50)} />
+          <CardHeader content={recipe.title.slice(0, 50)} />
           <CardDescription>
             <h4 className="text-gray-600">{recipe.publisher}</h4>
           </CardDescription>

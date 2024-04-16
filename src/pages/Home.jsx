@@ -6,9 +6,17 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-      <Header title="Our Recipes" bgClass="bg-image">
-        <button className="bg-blue-700 text-white hover:bg-blue-800 py-2 px-6 rounded-md">
-          <Link to="/recipes" className="text-white text-3xl hover:text-white font-semibold">
+      <Header
+        className="name"
+        data-text="Our Recipes"
+        title="Our Recipes"
+        bgClass="bg-image"
+      >
+        <button className="bg-blue-700 text-white hover:bg-blue-800 py-2 px-6 rounded-md  duration-200 ease-in-out">
+          <Link
+            to="/recipes"
+            className="text-white text-3xl hover:text-white font-semibold"
+          >
             Search Recipes
           </Link>
         </button>

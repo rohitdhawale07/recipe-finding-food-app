@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [activeItem, setActiveItem] = useState("Home");
+
+  const handleNavItem = (item) => {
+    setActiveItem(item);
+  };
   return (
     <>
       <nav className="p-4 shadow-md bg-slate-50  fixed w-full top-0 z-10">
@@ -14,12 +19,21 @@ function Navbar() {
             />
           </div>
           <div className="flex items-center space-x-4">
-            <Link to="/" className="text-back text-xl hover:text-gray-500">
+            <Link
+              onClick={() => handleNavItem("Home")}
+              to="/"
+              className={`text-xl ${
+                activeItem === "Home" ? "text-blue-500" : "text-black"
+              } hover:text-gray-500`}
+            >
               Home
             </Link>
             <Link
+              onClick={() => handleNavItem("Recipes")}
               to="/recipes"
-              className="text-black text-xl px-7 hover:text-gray-500"
+              className={`text-xl ${
+                activeItem === "Recipes" ? "text-blue-500" : "text-black"
+              } px-7 hover:text-gray-500`}
             >
               Recipes
             </Link>
